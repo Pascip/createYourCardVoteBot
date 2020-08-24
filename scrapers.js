@@ -2,14 +2,16 @@ const puppeteer = require("puppeteer");
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
-const ANSWERS = [["DarkMagician"], ["Ring", "Puzzle"]];
+const ANSWERS = [["DarkMagician"], ["Ring", "Puzzle"], ["2500"], ["2500"]];
 
 const QUESTIONS = [
   "Which of the following is Yugi’s signature ace monster?",
   "Which of the following are Millennium Items?",
+  "What is the ATK of Dark Magician?",
+  "What is the DEF of Blue-Eyes White Dragon?",
 ];
 
-const WINNER = "Graydle";
+const WINNER = "Valkyrie";
 const VOTE_AMOUNTS = 5;
 
 async function voteOnce(url, winner) {
@@ -112,5 +114,6 @@ async function voteMultipleTimes(url, amount, winner) {
     }
 }
 
-voteMultipleTimes("https://www.research.net/r/YTKM7YG", VOTE_AMOUNTS, WINNER);
+//voteMultipleTimes("https://www.research.net/r/YTKM7YG", VOTE_AMOUNTS, WINNER);
+voteMultipleTimes("https://www.research.net/r/8FX6S2W",VOTE_AMOUNTS, WINNER);
 //voteOnce("https://www.research.net/r/YTKM7YG", WINNER);
